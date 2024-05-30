@@ -1,0 +1,434 @@
+<!doctype html>
+<html lang="en">
+
+<head>
+  <meta charset="utf-8">
+  <title>FrontAngularANA</title>
+  <base href="/">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <link rel="icon" type="image/x-icon" href="favicon.ico">
+  <!-- Google Font -->
+  <link href="https://fonts.googleapis.com/css2?family=DM+Sans:wght@400;500;700&display=swap" rel="stylesheet">
+
+  <!-- Css Styles -->
+  <!--<link rel="stylesheet" href="./assets/css/bootstrap.min.css" type="text/css">-->
+  <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0-alpha1/dist/css/bootstrap.min.css" rel="stylesheet"
+    integrity="sha384-GLhlTQ8iRABdZLl6O3oVMWSktQOp6b7In1Zl3/Jr59b6EGGoI1aFkw7cmDA6j6gD" crossorigin="anonymous">
+  <link rel="stylesheet" href="./assets/css/font-awesome.min.css" type="text/css">
+  <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.15.1/css/all.css"
+    integrity="sha384-vp86vTRFVJgpjF9jiIGPEEqYqlDwgyBgEF109VFjmqGmIY/Y4HV4d3Gp2irVfcrp" crossorigin="anonymous">
+  <link rel="stylesheet" href="https://fonts.googleapis.com/icon?family=Material+Icons">
+  <link rel="stylesheet" href="./assets/css/elegant-icons.css" type="text/css">
+  <link rel="stylesheet" href="./assets/css/nice-select.css" type="text/css">
+  <link rel="stylesheet" href="./assets/css/barfiller.css" type="text/css">
+  <link rel="stylesheet" href="./assets/css/owl.carousel.min.css" type="text/css">
+  <link rel="stylesheet" href="./assets/css/slicknav.min.css" type="text/css">
+  <link rel="stylesheet" href="./assets/css/style.css" type="text/css">
+  <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.10.3/font/bootstrap-icons.css">
+  
+  <link rel="stylesheet" href="./assets/css/home.css" type="text/css">
+  <link rel="stylesheet" href="./assets/css/navbar.css" type="text/css">
+
+  <script>
+    function scrollToTop() {
+        window.scrollTo({
+            top: 0,
+            behavior: "smooth" // Esto hace que el scroll sea suave, pero puedes cambiarlo a "auto" si prefieres un scroll instantáneo
+        });
+    }
+  </script>
+
+</head>
+
+<body>
+    <!-- NAVBAR -->
+    <nav *ngIf="esUsuario" class="navbar navbar-expand-lg navbar-light custom-navbar pb-1 mb-md-5 fixed-top" id="navbar">
+        <div class="container">
+          <a class="navbar-brand" routerLink="/">
+            <img src="../../../assets/img/ChakanaLogo.png" width="120" height="30" alt="">
+          </a>
+        </div>
+    </nav>
+    
+    <button class="scroll-top-btn" onclick="scrollToTop()">
+        <i class="fas fa-chevron-up color-white"></i>
+    </button>    
+
+    <!-- CONTENT -->
+    <section class="carousel">
+        <div id="carouselExampleCaptions" class="carousel slide">
+          <div class="carousel-indicators">
+            <button type="button" data-bs-target="#carouselExampleCaptions" data-bs-slide-to="0" class="active" aria-current="true" aria-label="Slide 1"></button>
+            <button type="button" data-bs-target="#carouselExampleCaptions" data-bs-slide-to="1" aria-label="Slide 2"></button>
+            <button type="button" data-bs-target="#carouselExampleCaptions" data-bs-slide-to="2" aria-label="Slide 3"></button>
+          </div>
+          <div class="carousel-inner">
+            <div class="carousel-item active">
+              <img src="../../assets/img/hero/hero-1.jpg" class="d-block w-100" alt="...">
+              <div class="carousel-caption2 d-none d-md-block text-start">
+                <h1 class="p-2 rounded" style="background-color: rgba(3, 24, 115, 0.523);">Mejora tu bienestar con el arte</h1>
+                <h5>Eleva tu energía con el arte y el aeróbic</h5>
+              </div>
+            </div>
+            <div class="carousel-item">
+              <img src="../../assets/img/hero/hero-1.jpg" class="d-block w-100" alt="...">
+              <div class="carousel-caption2 d-none d-md-block text-start">
+                <h1>Desarrolla tu creatividad <br> con nosotros</h1>
+                <p>Expresa tu verdadera naturaleza a través del arte</p>
+              </div>
+            </div>
+            <div class="carousel-item">
+              <img src="../../assets/img/hero/hero-1.jpg" class="d-block w-100" alt="...">
+              <div class="carousel-caption2 d-none d-md-block text-start">
+                <h1>Third slide label</h1>
+                <h5>Some representative placeholder content for the third slide.</h5>
+              </div>
+            </div>
+          </div>
+          <button class="carousel-control-prev" type="button" data-bs-target="#carouselExampleCaptions" data-bs-slide="prev">
+            <span class="carousel-control-prev-icon" aria-hidden="true"></span>
+            <span class="visually-hidden">Previous</span>
+          </button>
+          <button class="carousel-control-next" type="button" data-bs-target="#carouselExampleCaptions" data-bs-slide="next">
+            <span class="carousel-control-next-icon" aria-hidden="true"></span>
+            <span class="visually-hidden">Next</span>
+          </button>
+        </div>
+    </section>
+    <!-- Carousel Section End -->
+  
+    <!-- About Section Begin -->
+    <section class="home-about spad">
+        <div class="container">
+            <div class="row">
+                <div class="col-lg-7">
+                    <div class="home__about__pic">
+                        <div class="home__about__pic__item large-item set-bg" id="aboutPic1"></div>
+                        <div class="home__about__pic__item">
+                            <div class="home__about__pic__item__inner set-bg" id="aboutPic2"></div>
+                            <div class="home__about__pic__item__inner set-bg" id="aboutPic3"></div>
+                        </div>
+                    </div>
+                </div>
+                <div class="col-lg-5">
+                    <div class="home__about__text">
+                        <div class="section-title">
+                            <img src="../../assets/img/icon.png" alt="">
+                            <h2>Bienvenido a FlexiLab</h2>
+                        </div>
+                        <span>“What hurts today makes you stronger tomorrow.”</span>
+                        <p>En Flexilab, nos esforzamos por brindar a nuestros clientes una experiencia única y personalizada en su camino hacia una vida más activa y saludable.
+                           Ofrecemos clases de entrenamiento físico, flexibilidad y danza para todos los niveles y edades,
+                            con el objetivo de ayudarte a alcanzar tus metas y mejorar tu bienestar físico y mental.</p>
+  
+                        <p class="para-2">Además, contamos con facilidades modernas para ofrecerte un entorno seguro y efectivo para tus entrenamientos.
+                           ¡Únete a Flexilab hoy y experimenta la diferencia en tu forma de vida y en tu cuerpo!.</p>
+                        <a [routerLink]="['/']" class="btn">MORE ABOUT US</a>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+    <!-- About Section End -->
+  
+    <!-- Chooseus Section Begin -->
+    <section class="chooseus spad">
+        <div class="container">
+            <div class="row">
+                <div class="col-lg-6">
+                    <div class="chooseus__text">
+                        <h2>Por que elegirnos </h2>
+                        <p>"Ofrecemos entrenamientos internacionales en línea, de Stretching y
+                           un método único creado por nuestra fundadora.
+                            Únete a nosotros para tener una experiencia transformadora desde la comodidad de tu hogar.
+                             Con nuestro programa  de entrenamiento,
+                              aprenderás nuevas técnicas de estiramiento y mejorarás tu flexibilidad y rango de movimiento.
+                               Nuestros entrenamientos en línea te permitirán disfrutar de esta experiencia desde cualquier parte del mundo.
+                                ¡Elige nuestro programa de Metodo Bata / Stretching y comienza tu camino hacia una vida más saludable y flexible hoy mismo!"</p>
+                    </div>
+                    <div class="chooseus__item">
+                        <div class="chooseus__item__icon">
+                            <img src="../../assets/img/chooseus/choose-1.png" alt="">
+                        </div>
+                        <div class="chooseus__item__text">
+                            <h2 class="choose-counter">997</h2>
+                            <p>Students</p>
+                        </div>
+                    </div>
+                    <div class="chooseus__item">
+                        <div class="chooseus__item__icon">
+                            <img src="../../assets/img/chooseus/choose-2.png" alt="">
+                        </div>
+                        <div class="chooseus__item__text">
+                            <h2 class="choose-counter">25</h2>
+                            <p>Years Of Experience</p>
+                        </div>
+                    </div>
+                </div>
+                <div class="col-lg-6">
+                    <div class="chooseus__pic">
+                        <img src="../../assets/img/dibujos/img2.jfif" alt="" class="w-100">
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+    <!-- Chooseus Section End -->
+  
+    <!-- Classes Section Begin -->
+    <section class="upcoming-classes spad">
+        <div class="container">
+            <div class="row">
+                <div class="col-lg-12">
+                    <div class="section-title normal-title">
+                        <h2>Top de nuestros cursos</h2>
+                        <h5>Descubre el poder de tu cuerpo y mente con nuestras clases.</h5>
+                    </div>
+                </div>
+            </div>
+            <div class="row">
+              <div class="col-lg-4 col-md-6 col-sm-6" *ngFor="let producto of top3Productos; let i = index">
+                <div class="classes__item">
+                    <div class="classes__item__pic set-bg bg-gallery5" data-setbg="../../assets/img/classes/classes-1.jpg">
+                      <span class="bg-warning px-2 py-1 text-white"><i class="bi bi-star-fill"></i> Top {{i+1}}</span>
+                    </div>
+                    <div class="classes__item__text">
+                      <p>{{producto.nombre}}</p>
+                      <h4><a [routerLink]="['/']">{{producto.descripcion}}</a></h4>
+                      <div class="row">
+                       <h6 class="col-8">Ana Hepner <span>- {{producto.categoria.nombre}} Teacher</span></h6>
+                       <p class="col-4 text-end pe-5">Online</p>
+                      </div>
+                      <a class="class-btn" (click)="sumarAlCarrito(producto)" >Añadir al Carrito</a>
+                     <!-- <a [routerLink]="['/']" class="class-btn">Read More</a> -->
+                  </div>
+                </div>
+              </div>
+              <div class="col-lg-4 col-md-6 col-sm-6" *ngFor="let producto of top3Productos; let i = index">
+                <div class="classes__item">
+                    <div class="classes__item__pic set-bg bg-gallery5" data-setbg="../../assets/img/classes/classes-1.jpg">
+                      <span class="bg-warning px-2 py-1 text-white"><i class="bi bi-star-fill"></i> Top {{i+1}}</span>
+                    </div>
+                    <div class="classes__item__text">
+                      <p>{{producto.nombre}}</p>
+                      <h4><a [routerLink]="['/']">{{producto.descripcion}}</a></h4>
+                      <div class="row">
+                       <h6 class="col-8">Ana Hepner <span>- {{producto.categoria.nombre}} Teacher</span></h6>
+                       <p class="col-4 text-end pe-5">Online</p>
+                      </div>
+                      <a class="class-btn" (click)="sumarAlCarrito(producto)" >Añadir al Carrito</a>
+                     <!-- <a [routerLink]="['/']" class="class-btn">Read More</a> -->
+                  </div>
+                </div>
+              </div>
+              <div class="col-lg-4 col-md-6 col-sm-6" *ngFor="let producto of top3Productos; let i = index">
+                <div class="classes__item">
+                    <div class="classes__item__pic set-bg bg-gallery5" data-setbg="../../assets/img/classes/classes-1.jpg">
+                      <span class="bg-warning px-2 py-1 text-white"><i class="bi bi-star-fill"></i> Top {{i+1}}</span>
+                    </div>
+                    <div class="classes__item__text">
+                      <p>{{producto.nombre}}</p>
+                      <h4><a [routerLink]="['/']">{{producto.descripcion}}</a></h4>
+                      <div class="row">
+                       <h6 class="col-8">Ana Hepner <span>- {{producto.categoria.nombre}} Teacher</span></h6>
+                       <p class="col-4 text-end pe-5">Online</p>
+                      </div>
+                      <a class="class-btn" (click)="sumarAlCarrito(producto)" >Añadir al Carrito</a>
+                     <!-- <a [routerLink]="['/']" class="class-btn">Read More</a> -->
+                  </div>
+                </div>
+              </div>
+            </div>
+        </div>
+    </section>
+    <!-- Classes Section End -->
+  
+    <!-- Gallery Section Begin -->
+    <section class="gallery">
+        <div class="container">
+            <div class="row">
+                <div class="col-lg-12">
+                    <div class="section-title normal-title">
+                        <h2>Galeria</h2>
+                        <h5>Transforma tu cuerpo y siente la diferencia con nuestro enfoque único de entrenamiento.<br/>
+                        </h5>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <div class="container-fluid">
+            <div class="row">
+                <div class="col-lg-3 col-md-4 col-6 p-2" *ngFor="let item of [1,2,3,4,5,6,7,8]">
+                    <div class="gallery__pic">
+                        <img src="../../assets/img/gallery/gallery-1.jpg" alt="">
+                    </div>
+                </div>
+                <div class="col-lg-3 col-md-4 col-6 p-2" *ngFor="let item of [1,2,3,4,5,6,7,8]">
+                    <div class="gallery__pic">
+                        <img src="../../assets/img/gallery/gallery-1.jpg" alt="">
+                    </div>
+                </div>
+                <div class="col-lg-3 col-md-4 col-6 p-2" *ngFor="let item of [1,2,3,4,5,6,7,8]">
+                    <div class="gallery__pic">
+                        <img src="../../assets/img/gallery/gallery-1.jpg" alt="">
+                    </div>
+                </div>
+                <div class="col-lg-3 col-md-4 col-6 p-2" *ngFor="let item of [1,2,3,4,5,6,7,8]">
+                    <div class="gallery__pic">
+                        <img src="../../assets/img/gallery/gallery-1.jpg" alt="">
+                    </div>
+                </div>
+                <div class="col-lg-3 col-md-4 col-6 p-2" *ngFor="let item of [1,2,3,4,5,6,7,8]">
+                    <div class="gallery__pic">
+                        <img src="../../assets/img/gallery/gallery-1.jpg" alt="">
+                    </div>
+                </div>
+                <div class="col-lg-3 col-md-4 col-6 p-2" *ngFor="let item of [1,2,3,4,5,6,7,8]">
+                    <div class="gallery__pic">
+                        <img src="../../assets/img/gallery/gallery-1.jpg" alt="">
+                    </div>
+                </div>
+                <div class="col-lg-3 col-md-4 col-6 p-2" *ngFor="let item of [1,2,3,4,5,6,7,8]">
+                    <div class="gallery__pic">
+                        <img src="../../assets/img/gallery/gallery-1.jpg" alt="">
+                    </div>
+                </div>
+                <div class="col-lg-3 col-md-4 col-6 p-2" *ngFor="let item of [1,2,3,4,5,6,7,8]">
+                    <div class="gallery__pic">
+                        <img src="../../assets/img/gallery/gallery-1.jpg" alt="">
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+    <!-- Gallery Section End -->
+  
+    <!-- Appoinment Section Begin -->
+    <section class="appointment pt-5">
+        <div class="container">
+            <div class="appointment__text">
+                <div class="row">
+                    <div class="col-lg-12">
+                        <div class="section-title">
+                            <img src="../../assets/img/icon-white.png" alt="">
+                            <h2>Contacto</h2>
+                        </div>
+                    </div>
+                </div>
+                <form action="#" class="appointment__form">
+                    <div class="row">
+                        <div class="col-lg-6">
+                            <input type="text" placeholder="Nombre">
+                        </div>
+                        <div class="col-lg-6">
+                            <input type="text" placeholder="Email">
+                        </div>
+                        <div class="col-lg-6">
+                            <input type="text" placeholder="Telefono">
+                        </div>
+                        <div class="col-lg-6">
+                          <input type="text" placeholder="Asunto">
+                        </div>
+                        <div class="col-lg-12 text-center">
+                            <textarea placeholder="Mensaje"></textarea>
+                            <button class="btn-2" type="submit">Enviar</button>
+                        </div>
+                    </div>
+                </form>
+            </div>
+        </div>
+    </section>
+    <!-- Appoinment Section End -->
+  
+    <!-- Testimonial Section Begin -->
+    <section class="testimonial spad">
+        <div class="container">
+            <div class="testimonial__slider owl-carousel">
+                <div class="testimonial__item">
+                    <div class="row d-flex justify-content-center">
+                        <div class="col-lg-10">
+                            <div class="testimonial__text">
+                                <p>This is my second time completing a 200 hr TTC from Zogin and I loved the experiences
+                                    even more than the first time that I had done in 2014.</p>
+                                <img src="../../assets/img/testimonial/testimonial-1.png" alt="">
+                                <h5>Linnie Walton <span>- Trainer</span></h5>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <div class="testimonial__item">
+                    <div class="row d-flex justify-content-center">
+                        <div class="col-lg-10">
+                            <div class="testimonial__text">
+                                <p>This is my second time completing a 200 hr TTC from Zogin and I loved the experiences
+                                    even more than the first time that I had done in 2015.</p>
+                                <img src="../../assets/img/testimonial/testimonial-1.png" alt="">
+                                <h5>Linnie Walton <span>- Trainer</span></h5>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <div class="testimonial__item">
+                    <div class="row d-flex justify-content-center">
+                        <div class="col-lg-10">
+                            <div class="testimonial__text">
+                                <p>This is my second time completing a 200 hr TTC from Zogin and I loved the experiences
+                                    even more than the first time that I had done in 2016.</p>
+                                <img src="../../assets/img/testimonial/testimonial-1.png" alt="">
+                                <h5>Linnie Walton <span>- Trainer</span></h5>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <div class="testimonial__item">
+                    <div class="row d-flex justify-content-center">
+                        <div class="col-lg-10">
+                            <div class="testimonial__text">
+                                <p>This is my second time completing a 200 hr TTC from Zogin and I loved the experiences
+                                    even more than the first time that I had done in 2017.</p>
+                                <img src="../../assets/img/testimonial/testimonial-1.png" alt="">
+                                <h5>Linnie Walton <span>- Trainer</span></h5>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+    <!-- Testimonial Section End -->
+  
+    <!-- Footer Section Begin -->
+    <div class="container">
+        <footer class="d-flex flex-wrap justify-content-between align-items-center py-3 my-4 border-top">
+          <div class="col-md-4 d-flex align-items-center">
+            <a href="/" class="mb-3 me-2 mb-md-0 text-muted text-decoration-none lh-1">
+              <svg class="bi" width="30" height="24"><use xlink:href="#bootstrap"></use></svg>
+            </a>
+      
+              <img src="../../../assets/img/ChakanaLogo.png" alt="" height="30" >
+      
+          </div>
+      
+          <ul class="nav col-md-4 justify-content-end list-unstyled d-flex">
+            <li class="ms-3"><a class="text-muted" href="#"><i class="bi bi-facebook"></i></a></li>
+            <li class="ms-3"><a class="text-muted" href="#"><i class="bi bi-instagram"></i></a></li>
+            <li class="ms-3"><a class="text-muted" href="#"><i class="bi bi-whatsapp"></i></a></li>
+          </ul>
+        </footer>
+    </div>
+    <!-- Footer Section Begin End-->
+
+  <!-- Js Plugins -->
+  <script src="./assets/js/jquery-3.3.1.min.js"></script>
+  <!-- <script src="./assets/js/bootstrap.min.js"></script> -->
+  <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0-alpha1/dist/js/bootstrap.bundle.min.js"
+    integrity="sha384-w76AqPfDkMBDXo30jS1Sgez6pr3x5MlQ1ZAGC+nuZB+EYdgRZgiwxhTBTkF7CXvN"
+    crossorigin="anonymous"></script>
+  <script src="./assets/js/jquery.nice-select.min.js"></script>
+  <script src="./assets/js/jquery.barfiller.js"></script>
+  <script src="./assets/js/jquery.slicknav.js"></script>
+  <script src="./assets/js/owl.carousel.min.js"></script>
+  <script src="./assets/js/main.js"></script>
+</body>
+
+</html>
